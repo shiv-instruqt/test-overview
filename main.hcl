@@ -1,9 +1,6 @@
 resource "lab" "main" {
   title       = "overview-test-18518ca9"
-  description = <<-EOF
-  This is the Skeleton Lab.
-  You can use this as a minimal starting point for developing labs.
-  EOF
+  description = "This is the Skeleton Lab.\nYou can use this as a minimal starting point for developing labs.\n"
 
   # timelimit and idle are both required on every lab.
   settings {
@@ -18,4 +15,15 @@ resource "lab" "main" {
   }
 
   layout = resource.layout.single_panel
+
+  content {
+    chapter "__default" {
+      title = "Default"
+
+      page "tc021-test-page" {
+        reference = resource.page.tc021-test-page
+        title     = "TC021 Test Page"
+      }
+    }
+  }
 }

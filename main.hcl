@@ -19,11 +19,6 @@ resource "lab" "main" {
   content {
     chapter "__default" {
       title = "Default"
-
-      page "tc021-test-page" {
-        reference = resource.page.tc021-test-page
-        title     = "TC021 Test Page"
-      }
     }
   }
 }
